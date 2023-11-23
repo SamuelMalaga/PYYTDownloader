@@ -18,9 +18,6 @@ try:
     out_path = video.streams.filter(only_audio=True).first().download()
     new_name = os.path.splitext(out_path)
 
-    # Renomeia o arquivo para ter a extensão .mp3
-    os.rename(out_path, new_name[0] + '.mp3')
-
     print('Done.....')
 except Exception as e:
     print(f"Ocorreu um erro: {e}")
